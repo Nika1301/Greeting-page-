@@ -38,14 +38,13 @@ function getGreeting() {
 
 function getDayColor() {
   let currentDay = new Date().getDay();
-  if ((currentDay = "monday")) {
+  if (currentDay === 1) {
     return "darkgray";
   }
-  if ((currentDay = "tuesday" || "wednesday" || "ttursday" || "friday")) {
+  if (currentDay >= 2 && currentDay <= 5) {
     return "lightblue";
   } else return "hotpink";
   // Code here
 }
 display.textContent = getGreeting();
 document.body.style.backgroundColor = getDayColor();
-console.log(getGreeting(), getDayColor());
